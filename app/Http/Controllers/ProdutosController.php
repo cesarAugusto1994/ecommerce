@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Categoria;
 use App\Marca;
 use App\Produto;
+use App\Vitrine;
 use Request;
 
 class ProdutosController extends Controller
@@ -25,7 +26,7 @@ class ProdutosController extends Controller
     {
         return view('produtos/adicionar')
             ->with('categorias', Categoria::all())
-            ->with('marcas', Marca::all());;
+            ->with('marcas', Marca::all());
     }
 
     public function salvar()

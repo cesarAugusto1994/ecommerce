@@ -44,6 +44,8 @@ Route::post('/marcas/editar/salvar', 'MarcaController@salvarEdicao')->name('marc
 
 Route::get('/produto/{id}/imagens/adicionar', 'ImagensController@adicionar')->name('imagens_adicionar');
 Route::post('/imagens/salvar', 'ImagensController@salvar')->name('imagens_salvar');
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/vitrine/adicionar', 'VitrineController@adicionar')->name('vitrine_adicionar');
+Route::post('/vitrine/remover', 'VitrineController@remover')->name('vitrine_remover');

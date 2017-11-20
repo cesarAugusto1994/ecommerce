@@ -80,5 +80,34 @@
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+<script>
+    $(document).ready(function () {
+
+        $('.add-to-vitrine').click(function () {
+            $.ajax({
+                method: "POST",
+                url: "/vitrine/adicionar",
+                data: {
+                    produto_id: $(this).data('produto'),
+                    _token: $(this).data('token')
+                }
+            });
+            window.location.reload();
+        });
+
+        $('.remove-from-vitrine').click(function () {
+            $.ajax({
+                method: "POST",
+                url: "/vitrine/remover",
+                data: {
+                    id: $(this).data('produto'),
+                    _token: $(this).data('token')
+                }
+            });
+
+            window.location.reload();
+        })
+    })
+</script>
 </body>
 </html>
