@@ -22,7 +22,6 @@
                 <tr>
                     <td></td>
                     <td>Nome</td>
-                    <td>Descricao</td>
                     <td>Quantidade</td>
                     <td>Valor</td>
                     <td>Categoria</td>
@@ -48,7 +47,6 @@
                         </div>
                     </td>
                     <td>{{ $produto->nome  }}</td>
-                    <td>{{ $produto->descricao  }}</td>
                     <td>{{ $produto->quantidade  }}</td>
                     <td>{{ $produto->valor  }}</td>
                     <td>{{ $produto->categoria->nome }}</td>
